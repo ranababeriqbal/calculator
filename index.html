@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('img.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        #input {
+            margin-top: 100px;
+            background-color: red;
+            padding: 30px;
+            color: white;
+        }
+        .btn-block{
+           background-color: gray;
+           border-radius: 50px;
+           margin-top: 20px;
+           color: white;
+           outline: none !important;
+        }
+        #class{
+            background-color: red !important;
+            color: white !important;
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" id="input2">
+         
+            
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="input">
+                    <div class="row">
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(1)">1</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(2)">2</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(3)">3</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator('+')">+</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(4)">4</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(5)">5</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(6)">6</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator('-')">-</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(7)">7</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(8)">8</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(9)">9</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator('*')">*</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator(0)">0</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator('/')">/</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator('=')">=</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn-block" onclick="calculator('.')">.</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button class="btn-block" id="class" onclick="calculator('c')">CLEAR</button>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+                
+            </div>
+         
+           
+
+          
+    </div>
+    <script>
+        function calculator(i){
+            var x=i
+            
+            if(x==='='){
+                document.getElementById('input').value=eval(document.getElementById('input').value)  
+            }
+            else if(x==='c'){
+                document.getElementById('input').value=''
+            }
+            else{
+                document.getElementById('input').value+=i;
+            }
+        }
+    </script>
+</body>
+
+</html>
